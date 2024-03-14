@@ -1,0 +1,103 @@
+/* Core CSS Code. Should only contain base elements */
+html {
+    color: black;
+    font-weight: lighter;
+    font-family: OpenSans;
+    background-color: white;
+}
+
+textarea {
+    width: 225px;
+    resize: none;
+    text-align: center;
+
+    padding: 7px 0px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+/* Variables and Data */
+:root {
+    --brandColor: #ff4d39;
+}
+
+/* Classes and Multiple Elements */
+.flexbox-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-in {
+    animation: fade-in 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.alt-border {
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.15), 0 5px 15px 0 rgba(0,0,0,0.10);
+}
+
+/* Font Families and Handlers */
+@font-face {
+    font-family: OpenSans;
+    src: url('../OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+/* ID's and Specific Elements */
+#main {
+    padding: 40px 50px;
+}
+
+#decal {
+    bottom: -150px;
+    right: -100px;
+
+    z-index: -1;
+    position: fixed;
+}
+
+#alt-footer {
+    font-size: 12px;
+
+    left: 50%;
+    top: 5px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+#loginButton {
+    width: 205px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--brandColor);
+
+    transition: all ease-in-out 0.1s;
+}
+
+/* Keyframes and Animations */
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+#loginButton:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+    transition: all ease-in-out 0.1s;
+}
